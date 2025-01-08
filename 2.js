@@ -1,25 +1,16 @@
-<<<<<<< HEAD
+const messege = +prompt ('введіть рік');
 const leapYear = "високосний рік";
 const normalYear = "звичайний рік";
-const year = (2032 && 2028 && 2024 && 2020 && 2016 && 2012 && 2008 && 2004 && 2000)
-const messege = +prompt ('введіть рік');
-if (messege == year) {
-    console.log (leapYear)
-} else { messege != year
-    console.log (normalYear);
-}
-    
+function isLeapYear(d){
+	var y=d.getFullYear();
+	  return (y%4==0 && y%100!=0) || y%400==0 ?true:false;
+};
+ if (messege %4==0 || messege %400==0) {
+        console.log (leapYear)
+     }
+    else if (messege  %100!=0)  
+      { 
+         console.log (normalYear);
+     }
 
-=======
-const leapYear = "високосний рік";
-const normalYear = "звичайний рік";
-const year = (2032 && 2028 && 2024 && 2020 && 2016 && 2012 && 2008 && 2004 && 2000)
-const messege = +prompt ('введіть рік');
-if (messege == year) {
-    console.log (leapYear)
-} else { messege != year
-    console.log (normalYear);
-}
-    
 
->>>>>>> 23b3b68080a6c3b5139ff1dcc71fcd9db30cb2f0
