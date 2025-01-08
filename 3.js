@@ -1,18 +1,19 @@
-const messege = +prompt ('введіть свій вік');
-const nAge = age > 1 ? 'рік' : 'роки';
+const userNumber = prompt("введіть скільки вам років");
+const message1 = "Вам "
+const message2 = " Рік"
+const message3 = " Роки"
+const message4 = " Років"
 
-//через що треба робити? чисто через if else? але як з роками більше 21 зробити
+switch (true) {
+    case userNumber % 100 != 11 && (userNumber % 10 === 1):
+        console.log(message1 + userNumber + message2);
+        break;
 
-// const oneYear = 'рік';
-// const moreOne = 'роки';
-// const fiveYear = 'років';
-
-      
-// if (messege == 1) {
-//     console.log ('вам ' + messege + oneYear)
-
-// } else if (messege > 1 && messege < 5 ) {
-//     console.log ('вам ' + messege + moreOne)
-// } else if (messege >= 5 ) {
-//     console.log ('вам ' + messege + fiveYear)
-// }
+    case (userNumber % 100 != 12) && (userNumber % 100 != 13) && (userNumber % 100 != 14) && (userNumber > 1 && userNumber < 5) 
+    && (userNumber > 20 && userNumber % 10 === 2) && 
+    (userNumber > 20 && userNumber % 10 === 3) || (userNumber > 20 && userNumber % 10 === 4):
+    console.log(message1 + userNumber + message3);
+    break;
+default:
+    console.log(message1 + userNumber + message4);
+}
