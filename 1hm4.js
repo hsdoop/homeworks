@@ -5,11 +5,41 @@
 
 
 const N = +prompt ('введіть число: ');
-for (let i = 0; i <= N; i++) {
-       if  ( N==i && N % N == 0 && N / 1 ) {
-          console.log('число просте'); 
-   } 
-   else  if (N==i && N/2 && N/3 )  {
- console.log('не є простим числом');
+let number = true;
+
+if (N < 2) {
+  console.log(`не є простим числом.`);
+} else {
+  for (let i = 2; i < N; i++) {
+    if (N % i === 0) {
+      number = false;
+      break;
+    }
+  }
+  if (number) {
+    console.log(`є простим числом.`);
+  } else {
+    console.log(`не є простим числом.`);
   }
 }
+
+
+      
+
+// const N = +prompt ('введіть число: ');
+// function isPrime(N) {
+//   if (N <= 1) {
+//     console.log(`Число не є простим числом.`);
+//     return;
+//   }
+// }
+// for (let i = 2; i <= N; i++) {
+//        if  ( N % i == 0 ) { 
+//  console.log('є простим числом');
+//        isPrime = false;
+//         break;
+//           } else  {
+//           console.log(`Число не є простим числом.`);
+//       }
+  
+//        }
