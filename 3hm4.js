@@ -1,13 +1,20 @@
-const tree = 4; 
+const height = +prompt('висота: '); 
 
-for (let i = 1; i <= tree; i++) {
+console.log('height>', height); 
+
+let stars = 1; 
+
+for (let i = height; i > 0; i--) {
     let space = '';
-    for (let j = 0; j < tree - i; j++) {
-        space += ' '; 
+
+    for (let j = 0; j < i; j++) {
+        space = space +' '; 
     }
-    for (let k = 0; k < 2 * i - 1; k++) {
+    
+    for (let k = 0; k < stars; k++) {
         space += '*'; 
     }
-    console.log(space); 
+    stars = stars + 2;
+    console.log(space);
 }
 
